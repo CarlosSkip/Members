@@ -1,6 +1,6 @@
-@extends('base')
+@extends('layouts.app')
 
-@section('main')
+@section('content')
 <div class="row">
 <div class="col-sm-12">
 
@@ -17,7 +17,7 @@
         <tr>
           <td>Nome</td>
           <td>Email</td>
-          <td>Profissao</td>
+          <td>Profissão</td>
           <td>Cidade</td>
           <td>Estado</td>
           <td>Telefone</td>

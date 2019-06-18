@@ -63,7 +63,7 @@ class ContatosController extends Controller
 
         $contatos->save();
 
-        return redirect('/contatos')->with('success', 'Contato Salvo!!');
+        return response()->json(['success'=>'Data is successfully added']);
         
     }
 
@@ -110,18 +110,15 @@ class ContatosController extends Controller
 
         ]);
 
-        $contatos = Contatos::find($id)([
-            
-            'nome' => $request->nome,
-            'sobrenome' => $request->sobrenome,
-            'email' => $request->email,
-            'telefone' => $request->telefone,
-            'cidade' => $request->cidade,
-            'estado' => $request->estado,
-            'profissao' => $request->profissao
-             
-         ]); 
-         $contatos->save();
+        $contatos = Contatos::find($id);
+        $contatos->nome = $request->nome;
+        $contatos->sobrenome = $request->sobrenome;
+        $contatos->email = $request->email;
+        $contatos->telefone = $request->telefone;
+        $contatos->cidade =  $request->cidade;
+        $contatos->estado = $request->estado;
+        $contatos->profissao = $request->profissao;
+         $contatos->update();
 
          return redirect('/contatos')->with('success', 'Atualizado com Sucesso!');
         
