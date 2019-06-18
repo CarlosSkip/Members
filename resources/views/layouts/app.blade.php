@@ -41,7 +41,7 @@
                         <ul class="navbar-nav mr-auto">
 
                             <li class="nav-item" >
-                                <a class="navbar-brand" href="#">Campos</a>
+                                <a class="navbar-brand" href="/contatos">Campos</a>
                             </li>
                 
                             <li class="nav-item" >
